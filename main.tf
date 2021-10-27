@@ -1,21 +1,21 @@
 resource "rke_cluster" "kubernetes-cluster" {
   nodes {
-    address = "10.184.0.2"
-    user    = "vmgcp"
+    address = "103.87.155.77"
+    user    = "bigdata1"
     role    = [ "controlplane", "worker", "etcd" ]
     ssh_key = file("replikasi.key")
     #sesuaikan location pathnya
   }
 
   nodes {
-    address = "103.87.155.77"
-    user    = "bigdata1"
+    address = "103.87.155.76"
+    user    = "bigdata2"
     role    = ["worker"]
     ssh_key = file("replikasi.key")
   }
   nodes {
-    address = "103.87.155.76"
-    user    = "bigdata2"
+    address = "34.101.77.213"
+    user    = "vmgcp"
     role    = ["worker"]
     ssh_key = file("replikasi.key")
   }
