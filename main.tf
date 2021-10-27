@@ -8,13 +8,13 @@ resource "rke_cluster" "kubernetes-cluster" {
   }
 
   nodes {
-    address = "192.168.1.253"
+    address = "103.87.155.77"
     user    = "bigdata1"
     role    = ["worker"]
     ssh_key = file("replikasi.key")
   }
   nodes {
-    address = "192.168.20.253"
+    address = "103.87.155.76"
     user    = "bigdata2"
     role    = ["worker"]
     ssh_key = file("replikasi.key")
