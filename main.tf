@@ -13,13 +13,13 @@ resource "rke_cluster" "kubernetes-cluster" {
     role    = ["worker"]
     ssh_key = file("replikasi.key")
   }
-  nodes {
-    address = "10.184.0.2"
-    user    = "vmgcp"
-    role    = ["worker"]
-    ssh_key = file("replikasi.key")
-  }
-}
+#   nodes {
+#     address = "10.184.0.2"
+#     user    = "vmgcp"
+#     role    = ["worker"]
+#     ssh_key = file("replikasi.key")
+#   }
+# }
 
  resource "local_file" "kube_cluster_yaml" {   
      filename = "kube_config_cluster.yml"
