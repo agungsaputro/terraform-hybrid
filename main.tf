@@ -14,7 +14,7 @@ resource "rke_cluster" "kubernetes-cluster" {
     ssh_key = file("replikasi.key")
   }
   nodes {
-    address = "34.101.77.213"
+    address = "10.184.0.2"
     user    = "vmgcp"
     role    = ["worker"]
     ssh_key = file("replikasi.key")
